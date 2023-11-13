@@ -107,7 +107,8 @@ export const QuestionReducer = createReducer(initialState, {
   },
   answerQuestion: (state, action) => {
     let { qn, choice } = action.payload;
-    let newAnswers = state.answers;
+    
+    let newAnswers = [...state.answers];
     newAnswers[qn] = choice;
     return {
       ...state,

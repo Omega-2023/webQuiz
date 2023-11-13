@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary: #48a0db;
+  --light-gray: #f2f4f6;
+  --deep-gray: #d8d9db;
+  --light-primary: #daecf7;
+}
+
+.option-label {
+  border: 2px solid transparent;
+}
+
+.mqc {
+  color: gray;
+}
+
+.input-container .radio-option:checked ~ .option-label {
+  border: 2px solid var(--primary);
+}
+
+.input-container .radio-option:checked ~ .option-label .mqc {
+  color: var(--primary);
+}
+
