@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 function QuestionBox({ current }) {
   const dispatch = useDispatch();
-  const { currentQuestion } = useSelector((state) => state.questions);
+  const { currentQuestion, answers } = useSelector((state) => state.questions);
+  let [isAnswered, setAnswered] = useState(false);
 
   const handleQuestionChange = () => {
     dispatch({
@@ -12,10 +13,21 @@ function QuestionBox({ current }) {
     });
   };
 
+  useEffect(() => {
+    if (answers[current - 1] === null) {
+      return setAnswered(false);
+    }
+    setAnswered(true);
+  }, [answers]);
+
   return (
     <div
-      className={` cursor-pointer ${
-        current === currentQuestion ? "text-red-400" : null
+      className={` my-2 w-[1cm] h-[1cm] 500px:w-[1.2cm] 500px:h-[1.2cm] rounded-full text-[16px] flex justify-center items-center cursor-pointer border-2 ${
+        isAnswered ? " bg-primary border-primary text-white" : null
+      } ${
+        currentQuestion === current
+          ? " bg-gray-400 text-white border-gray-400"
+          : null
       }`}
       onClick={() => handleQuestionChange()}
     >

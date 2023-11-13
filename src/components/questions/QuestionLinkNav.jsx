@@ -5,10 +5,12 @@ function QuestionLinkNav() {
   const { questions } = useSelector((state) => state.questions);
 
   return (
-    <div className="w-full h-full flex flex-col gap-2 bg-gray-300">
-      {questions.map((q, index) => (
-        <QuestionBox current={index + 1} />
-      ))}
+    <div className="w-full h-full flex py-2 items-center flex-col gap-2 bg-light-gray">
+      <div className="h-full block overflow-y-auto">
+        {questions.map((q, index) => (
+          <QuestionBox current={index + 1} />
+        ))}
+      </div>
     </div>
   );
 }
