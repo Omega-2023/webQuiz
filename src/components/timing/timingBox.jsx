@@ -1,0 +1,37 @@
+import React, { useEffect, useState } from "react";
+
+function TimingBox() {
+  const [time, setTime] = useState(3600);
+
+  useEffect(() => {
+    let interval;
+    if (time > 0) {
+      interval = setInterval(() => {
+        setTime(time - 1);
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [time]);
+
+  const formatTime = () => {
+    const hours = Math.floor(time / 3600);
+    const minutes = Math.floor((time % 3600) / 60);
+    const seconds = time % 60;
+
+    const formattedTime = `${String(hours).padStart(2, "0")}:${String(
+      minutes
+    ).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+    return formattedTime;
+  };
+
+  return (
+    <div>
+      Time remaining: {formatTime()}
+      <span></span>
+    </div>
+  );
+}
+
+export default TimingBox;
