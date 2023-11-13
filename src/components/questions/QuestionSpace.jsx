@@ -8,7 +8,6 @@ function QuestionSpace() {
       <form className="w-full">
         <div className="flex flex-col gap-1 w-full">
           <input type="radio" name="q-[]" />
-          
         </div>
         <input type="reset" name="q-[]" />
       </form>
