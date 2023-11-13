@@ -20,7 +20,10 @@ function QuestionNavigation() {
   };
 
   const handleSubmit = () => {
-    console.log("Submit");
+    dispatch({
+      type: "updateProgress",
+      payload: "finish",
+    });
   };
 
   const handleNextQuestion = () => {

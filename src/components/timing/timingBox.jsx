@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 function TimingBox() {
-  const [time, setTime] = useState(3600);
+  const { currentTime } = useSelector((state) => state.time);
+  const dispatch = useDispatch()
+  const [time, setTime] = useState(currentTime);
+
+  if(time === 0){
+    dis
+  }
 
   useEffect(() => {
     let interval;
