@@ -88,7 +88,7 @@ const initialState = {
       ],
     },
   ],
-  currentQuestion: null,
+  currentQuestion: 1,
   answers: [],
 };
 
