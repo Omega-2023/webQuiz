@@ -24,6 +24,13 @@ function QuestionNavigation() {
       type: "updateProgress",
       payload: "finish",
     });
+    dispatch({
+      type: "currentQuestion",
+      payload: 1,
+    });
+    dispatch({
+      type: "startOver",
+    });
   };
 
   const handleNextQuestion = () => {

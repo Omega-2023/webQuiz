@@ -10,12 +10,18 @@ function FinishPage() {
       type: "updateProgress",
       payload: "in progress",
     });
+    dispatch({
+      type: "initializedAnswerSheet",
+    });
   };
 
   const exit = () => {
     dispatch({
       type: "updateProgress",
       payload: "not started",
+    });
+    dispatch({
+      type: "initializedAnswerSheet",
     });
   };
 
