@@ -36,7 +36,7 @@ function TimingBox() {
   };
 
   return (
-    <div>
+    <div className=" px-2 text-xl text-white">
       Time remaining: {formatTime()}
       <span></span>
     </div>
