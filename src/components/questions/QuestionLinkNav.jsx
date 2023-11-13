@@ -1,4 +1,4 @@
-import QuestionBox from "./questionLink.jsx";
+import Links from "./questionLink.jsx";
 import { useSelector } from "react-redux";
 
 function QuestionLinkNav() {
@@ -6,9 +6,10 @@ function QuestionLinkNav() {
 
   return (
     <div className="w-full h-full flex py-2 items-center flex-col gap-2 bg-light-gray">
-      <div className="h-full block overflow-y-auto">
+      <div className=" font-medium">{` Filter >`}</div>
+      <div className="h-[90%] block overflow-y-auto pb-20">
         {questions.map((q, index) => (
-          <QuestionBox current={index + 1} />
+          <Links current={index + 1} />
         ))}
       </div>
     </div>

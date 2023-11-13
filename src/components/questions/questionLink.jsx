@@ -22,13 +22,13 @@ function QuestionBox({ current }) {
 
   return (
     <div
-      className={` my-2 w-[1cm] h-[1cm] 500px:w-[1.2cm] 500px:h-[1.2cm] rounded-full text-[16px] flex justify-center items-center cursor-pointer border-2 ${
-        isAnswered ? " bg-primary border-primary text-white" : null
-      } ${
+      className={` ${
         currentQuestion === current
           ? " bg-gray-400 text-white border-gray-400"
+          : isAnswered
+          ? " bg-primary border-primary text-white"
           : null
-      }`}
+      } my-2 w-[1cm] h-[1cm] 500px:w-[1.2cm] 500px:h-[1.2cm] rounded-full text-[16px] flex justify-center items-center cursor-pointer border-2 `}
       onClick={() => handleQuestionChange()}
     >
       {current}

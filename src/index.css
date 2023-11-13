@@ -9,6 +9,10 @@
   --light-primary: #daecf7;
 }
 
+*::-webkit-scrollbar{
+  width: 1px;
+}
+
 .option-label {
   border: 2px solid transparent;
 }
@@ -24,4 +28,5 @@
 .input-container .radio-option:checked ~ .option-label .mqc {
   color: var(--primary);
 }
+
 

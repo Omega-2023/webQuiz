@@ -18,7 +18,7 @@ function QuestionBox({ question, index }) {
   return (
     <>
       {currentQuestion === index + 1 && (
-        <div className="w-full py-10 px-4 bg-white">
+        <div className="w-full py-10 px-4 bg-white h-full overflow-y-auto">
           <div className=" w-full py-1 flex flex-row gap-2 items-center">
             <span className=" text-[14px] text-gray-600 font-medium">
               Question {index + 1}
@@ -62,6 +62,7 @@ function QuestionBox({ question, index }) {
             <div className=" flex justify-end py-1 w-full px-3">
               <input
                 type="reset"
+                onClick={() => handleSelectAnswer(null)}
                 className=" cursor-pointer mt-5 rounded-xl bg-primary px-4 py-2 font-bold text-white"
                 value={"Clear Answer"}
                 name={`q-[${index * 3 - 2 + question.question.slice(0, 2)}]`}
