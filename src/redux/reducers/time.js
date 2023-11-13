@@ -5,7 +5,7 @@ const initialState = {
 };
 
 export const TimeReducer = createReducer(initialState, {
-  updateTime: (state) => {
+  timeOut: (state) => {
     state.currentTime = 0;
   },
 });

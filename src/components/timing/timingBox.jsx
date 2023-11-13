@@ -3,11 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 
 function TimingBox() {
   const { currentTime } = useSelector((state) => state.time);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [time, setTime] = useState(currentTime);
 
-  if(time === 0){
-    dis
+  if (time === 0) {
+    dispatch({
+      type: "timeOut",
+    });
   }
 
   useEffect(() => {
