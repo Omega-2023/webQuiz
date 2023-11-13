@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
 
 const initialState = {
-  status: "in progress",
+  status: "finish",
   enum: ["not started", "in progress", "finish"],
 };
 
