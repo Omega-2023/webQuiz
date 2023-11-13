@@ -1,14 +1,34 @@
 import Lottie from "lottie-react";
 import React from "react";
 import ana from "../assets/analysiz.json";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 function FinishPage() {
   const dispatch = useDispatch();
+  const { markingScheme, answers, questions } = useSelector(
+    (state) => state.questions
+  );
+
+  const calculateScore = () => {
+    let scores = 0;
+    for (let i = 0; i < questions.length; i++) {
+      if (markingScheme[i] === answers[i]) {
+        scores++;
+      }
+    }
+
+    return scores;
+  };
+
+  let scores = calculateScore();
+
   const restart = () => {
     dispatch({
       type: "updateProgress",
       payload: "in progress",
+    });
+    dispatch({
+      type: "initializedAnswerSheet",
     });
     dispatch({
       type: "initializedAnswerSheet",
@@ -36,7 +56,7 @@ function FinishPage() {
             SCORE
           </span>
           <span className="text-7xl px-2 font-medium text-blue-500 text-center">
-            55%
+            {(scores / questions.length) * 100}%
           </span>
         </div>
         <div className=" flex flex-row flex-wrap gap-3 justify-center">
@@ -45,7 +65,7 @@ function FinishPage() {
               CORRECT ANSWERS
             </span>
             <span className="text-7xl px-2 font-medium text-emerald-500 text-center">
-              55
+              {scores}
             </span>
           </div>
           <div className="flex flex-col w-[5cm] border border-primary py-1">
@@ -53,7 +73,7 @@ function FinishPage() {
               WRONG ANSWERS
             </span>
             <span className="text-7xl px-2 font-medium text-red-500 text-center">
-              55
+              {questions.length - scores}
             </span>
           </div>
         </div>

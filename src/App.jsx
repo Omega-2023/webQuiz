@@ -14,6 +14,10 @@ function App() {
     dispatch({
       type: "initializedAnswerSheet",
     });
+    dispatch({
+      type: "initializedMakingScheme",
+      payload: ["B", "C", "A", "C", "C", "B", "B", "C", "A", "B"],
+    });
     return <QuestionPage />;
   }
   if (status === "finish") {

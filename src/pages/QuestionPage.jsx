@@ -14,6 +14,13 @@ function QuestionPage() {
       type: "updateProgress",
       payload: "finish",
     });
+    dispatch({
+      type: "setCurrentQuestion",
+      payload: 1,
+    });
+    dispatch({
+      type: "startOver",
+    });
   };
   return (
     <div className="w-full overflow-x-hidden">

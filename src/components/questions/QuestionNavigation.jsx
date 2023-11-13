@@ -25,7 +25,7 @@ function QuestionNavigation() {
       payload: "finish",
     });
     dispatch({
-      type: "currentQuestion",
+      type: "setCurrentQuestion",
       payload: 1,
     });
     dispatch({
