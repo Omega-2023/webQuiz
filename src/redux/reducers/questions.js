@@ -12,8 +12,7 @@ const initialState = {
       ],
     },
     {
-      question:
-        "Which imaging modality uses magnetic fields and radio waves to create detailed images of the body's internal structures?",
+      question: "Which imaging modality uses magnetic fields and radio waves to create detailed images of the body's internal structures?",
       choices: ["X-ray", "CT scan", "MRI", "Ultrasound"],
     },
     {
@@ -103,7 +102,7 @@ export const QuestionReducer = createReducer(initialState, {
   setCurrentQuestion: (state, action) => {
     state.currentQuestion = action.payload;
   },
-  
+
   initializedAnswerSheet: (state) => {
     let answersArr = state.questions.map((q) => {
       return null;
