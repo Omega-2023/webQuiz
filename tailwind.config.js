@@ -37,6 +37,8 @@ export default {
         "light-gray": "#F2F4F6",
         "deep-gray": "#D8D9DB",
         "light-primary": "#DAECF7",
+        "primary-green": '#10c403',
+        'dark-700': '#3e5569',
       },
     },
   },

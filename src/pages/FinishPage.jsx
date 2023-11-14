@@ -1,6 +1,5 @@
-import Lottie from "lottie-react";
 import React from "react";
-import ana from "../assets/analysiz.json";
+import { HiCheckCircle } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
 
 function FinishPage() {
@@ -46,8 +45,39 @@ function FinishPage() {
   };
 
   return (
-    <div className="w-full h-[100vh] grid grid-cols-2 py-10 px-3 500px:px-0">
-      <div className=" order-1 col-span-full 800px:col-span-1 flex flex-col gap-3 justify-center items-center px-3">
+    <div className="w-full h-[100vh] flex justify-center items-center bg-primary-green">
+      <div className=" w-full 600px:w-[15cm] px-4 400px:px-10 600px:px-0 grid grid-cols-2 justify-center">
+
+        <div className="h-[6cm] 600px:h-auto col-span-full 600px:col-span-1  flex justify-center items-center bg-dark-700">
+          <HiCheckCircle className=" text-white text-[82px]" />
+        </div>
+
+        <div className="col-span-full 600px:col-span-1 py-10 flex flex-col items-center bg-white">
+          <h2 className=" text-xl text-dark-700 font-medium">
+            Congratulations!
+          </h2>
+          <p className=" mt-3  text-dark-700">
+            Your exam has been <br /> successfuly submitted
+          </p>
+          <div className=" w-full px-10 mt-14">
+            <button className=" bg-primary text-white font-semibold w-full py-2 ">
+              Leave Feedback
+            </button>
+            <button className=" bg-primary-green text-white font-semibold w-full  py-2 mt-5">
+              Return to Dashboard
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default FinishPage;
+
+/*
+
+<div className=" order-1 col-span-full 800px:col-span-1 flex flex-col gap-3 justify-center items-center px-3">
         <h1 className=" px-2 text-center text-3xl font-bold text-blue-600">
           ANALYSIS
         </h1>
@@ -95,8 +125,5 @@ function FinishPage() {
       <div className="w-full  col-span-full 800px:col-span-1 order-1">
         <Lottie animationData={ana} />
       </div>
-    </div>
-  );
-}
 
-export default FinishPage;
+*/
