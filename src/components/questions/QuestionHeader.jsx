@@ -7,6 +7,9 @@ function QuestionHeader() {
       <div>
         <Timimg />
       </div>
+      <div>
+      N330 A1 Exam 2 FA23- RAYMOND ADJETEY (radjetey)
+      </div>
       <div className=" hidden 450px:block font-medium text-2xl text-gray-300">
         {" "}
         ToolKit :{" "}

@@ -45,7 +45,8 @@ function FinishPage() {
   };
 
   return (
-    <div className="w-full h-[100vh] flex justify-center items-center bg-primary-green">
+    <div className="w-full relative h-[100vh] flex flex-col justify-center items-center bg-primary-green">
+    <p className=" absolute top-10 text-white font-semibold">Exam: N330 A1 Exam 2 FA23, Exam Taker: - RAYMOND ADJETEY (radjetey)</p>
       <div className=" w-full 600px:w-[15cm] px-4 400px:px-10 600px:px-0 grid grid-cols-2 justify-center">
 
         <div className="h-[6cm] 600px:h-auto col-span-full 600px:col-span-1  flex justify-center items-center bg-dark-700">
@@ -54,16 +55,16 @@ function FinishPage() {
 
         <div className="col-span-full 600px:col-span-1 py-10 flex flex-col items-center bg-white">
           <h2 className=" text-xl text-dark-700 font-medium">
-            Congratulations!
+            Uploaded Complete!
           </h2>
-          <p className=" mt-3  text-dark-700">
-            Your exam has been <br /> successfuly submitted
+          <p className=" mt-3  text-[14px] text-dark-700 text-center">
+            Your exam file has uploaded successfuly
           </p>
           <div className=" w-full px-10 mt-14">
-            <button className=" bg-primary text-white font-semibold w-full py-2 ">
+            <button className=" rounded-3xl border-2 border-primary text-primary font-semibold w-full py-2 ">
               Leave Feedback
             </button>
-            <button className=" bg-primary-green text-white font-semibold w-full  py-2 mt-5">
+            <button className="rounded-3xl border-2 border-primary bg-primary text-white font-medium w-full  py-2 mt-5">
               Return to Dashboard
             </button>
           </div>

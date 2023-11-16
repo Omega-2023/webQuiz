@@ -33,11 +33,11 @@ export default {
         "1600px": "1600px",
       },
       colors: {
-        primary: "#48A0DB",
+        primary: "#2a73ae",
         "light-gray": "#F2F4F6",
         "deep-gray": "#D8D9DB",
         "light-primary": "#DAECF7",
-        "primary-green": '#10c403',
+        "primary-green": '#029449',
         'dark-700': '#3e5569',
       },
     },
