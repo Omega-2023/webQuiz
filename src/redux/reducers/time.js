@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
-
+const initialTime = 6600;
 const initialState = {
-  currentTime: 3600,
+  currentTime: initialTime,
 };
 
 export const TimeReducer = createReducer(initialState, {
@@ -9,6 +9,6 @@ export const TimeReducer = createReducer(initialState, {
     state.currentTime = 0;
   },
   startOver: (state) => {
-    state.currentTime = 3600;
+    state.currentTime = initialTime;
   },
 });
