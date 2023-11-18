@@ -7,7 +7,7 @@ function QuestionHeader() {
     <div className="h-[1.7cm] bg-dark-700 w-full flex flex-row justify-between items-center px-3">
       <div className=" font-medium text-2xl text-gray-300"> Examplify</div>
       <div className=" text-white">
-        NURA401 A1 Exam 4 FA23- RAYMOND ADJETEY (radjetey)
+        NURA330 A1 Exam 3 FA23- RAYMOND ADJETEY (radjetey)
       </div>
 
       <div>
