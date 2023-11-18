@@ -46,7 +46,7 @@ function FinishPage() {
 
   return (
     <div className="w-full relative h-[100vh] flex flex-col justify-center items-center bg-primary-green">
-    <p className=" absolute top-10 text-white font-semibold">Exam: N330 A1 Exam 2 FA23, Exam Taker: - RAYMOND ADJETEY (radjetey)</p>
+    <p className=" absolute top-10 text-white font-semibold">Exam: NURA401 Exam 4 FA23, Exam Taker: - RAYMOND ADJETEY (radjetey)</p>
       <div className=" w-full 600px:w-[15cm] px-4 400px:px-10 600px:px-0 grid grid-cols-2 justify-center">
 
         <div className="h-[6cm] 600px:h-auto col-span-full 600px:col-span-1  flex justify-center items-center bg-dark-700">
